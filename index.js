@@ -1,12 +1,10 @@
 const express = require('express')
-var path = require('path');
 const app = express();
 const port = 8000; //Select Port To Use
 
-// view engine setup
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-//setup public folder
+// View Engine Setup
+app.set('view engine', 'ejs')
+// Static File Setup
 app.use(express.static(__dirname + '../public'));
 
 //Usage Example
@@ -17,3 +15,5 @@ siswa = siswa.map(x => `<div class="card"><p>Nama : ${x.name}</p>
 app.get('/',async (req, res) => {
   res.render('index', {siswa:siswa,sekolah:nama})
 })
+
+app.listen(port) //Must Have
