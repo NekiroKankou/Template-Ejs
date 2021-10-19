@@ -8,7 +8,8 @@ In Index.js Express
 app.get('/', (req, res) => {
   res.render('file.ejs', {name:'Budi Setiawan'})
 })
+```
+How to Call Data
 ```html
 <p class="name"><%- name -%></p>
 ```
-
